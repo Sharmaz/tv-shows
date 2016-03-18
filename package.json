@@ -15,8 +15,12 @@
   "author": "Ivan Robles <irae45@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "nock": "^7.2.2",
     "standard": "^6.0.8",
     "tap-spec": "^4.1.1",
     "tape": "^4.5.1"
+  },
+  "dependencies": {
+    "client-request": "^1.0.1"
   }
 }
