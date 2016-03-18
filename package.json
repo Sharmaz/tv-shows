@@ -4,7 +4,8 @@
   "description": "A TVMaze API client",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*-test.js"
+    "lint": "standard",
+    "test": "npm run lint && tape test/*-test.js | tap-spec"
   },
   "keywords": [
     "tvmaze",
@@ -14,6 +15,7 @@
   "author": "Ivan Robles <irae45@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "standard": "^6.0.8",
     "tap-spec": "^4.1.1",
     "tape": "^4.5.1"
   }
