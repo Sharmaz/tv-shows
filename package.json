@@ -1,0 +1,20 @@
+{
+  "name": "tv-shows",
+  "version": "1.0.0",
+  "description": "A TVMaze API client",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*-test.js"
+  },
+  "keywords": [
+    "tvmaze",
+    "tv",
+    "shows"
+  ],
+  "author": "Ivan Robles <irae45@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1"
+  }
+}
