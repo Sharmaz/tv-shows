@@ -79,3 +79,22 @@ test('should search shows', function (t) {
     t.end()
   })
 })
+
+test('should show single search ', function (t) {
+  var client = tvmaze.createClient({ endpoint: endpoint })
+
+  t.equals(typeof client.search, 'function', 'should be a function')
+
+  nock(endpoint)
+    .get('/singlesearch/shows')
+    .query({ q: 'house' })
+    .reply(200, [{ name: 'House' }])
+
+  client.search('house', { single: true }, function (err, show) {
+    t.error(err, 'should not be an error')
+    t.ok(Array.isArray(show), 'should be an array')
+    t.equals(typeof show, 'object', 'should be a single element')
+    t.equals(show[0].name, 'House', 'should retrieve a show name')
+    t.end()
+  })
+})
